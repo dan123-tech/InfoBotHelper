@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+<!-- DOMENIU-->
+<topic name="domeniu">
+    <category>
+        <pattern>^ Subprograme ^</pattern>
+        <template>
+            Ce ai dori sa afli despre subprograme?
+            <button>
+                <text>Definitie</text>
+                <postback>definitie</postback>
+            </button>
+            <button>
+                <text>Variabile Globale</text>
+                <postback>variabile globale</postback>
+            </button>
+            <button>
+                <text>Variabile Locale</text>
+                <postback>variabile locale</postback>
+            </button>
+            <button>
+                <text>Apel prin valoare</text>
+                <postback>valoare</postback>
+            </button>
+            <button>
+                <text>Apel prin referinta</text>
+                <postback>referinta</postback>
+            </button>
+            <button>
+                <text>Mai multe informatii</text>
+                <url><map name="link">subprograme</map></url>
+            </button>
+            <think>
+            <set name="topic">subprograme</set>
+            </think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ Structuri de Date ^</pattern>
+        <template>
+            Ce ai dori sa afli despre structuri?
+            <button>
+                <text>Definitie Structuri de date</text>
+               <postback>definitie structuri</postback>
+            </button>
+               <button>
+                <text>Notatie</text>
+               <postback>notatie</postback>
+            </button>
+            <think>
+            <set name="topic">structuri</set>
+            </think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Grafuri General</pattern>
+        <template>
+            Ce ai dori sa stii despre grafuri?
+            <button>
+                <text>Grafuri Orientate</text>
+                <postback>grafuri orientate</postback>
+            </button>
+            <button>
+                <text>Grafuri Neorientate</text>
+                <postback>grafuri neorientate</postback>
+            </button>
+            <think>
+            <set name= "topic" >grafurigeneral</set>
+            </think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>^ Bac ^</pattern>
+        <template>
+            <link>
+                <text>Apasa aici!</text>
+                <url><map name="link">bac</map></url>
+            </link>
+        </template>
+    </category>
+</topic>
+<!--	SUBPROGRAME-->
+ <topic name="subprograme">
+    <category>
+        <pattern>^ Definitie ^</pattern>
+        <template>
+            Un subprogram este o colecție de tipuri de date, variabile, instrucțiuni care îndeplinesc o anumită sarcină (calcule, citiri, afișări), atunci când este apelat de un program sau de un alt subprogram.
+            <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+            </template>
+    </category>
+      <category>
+        <pattern>^ Variabile Globale ^</pattern>
+        <template>
+           Variabilele globale sunt variabile ce pot fi utilizate in interiorul oricarei functii din program. Variabilele globale se declara la inceputul programului inainte de declararea oricarei functii.
+            <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+           </template>
+    </category>
+     <category>
+        <pattern>^ Variabile Locale ^</pattern>
+        <template> 
+        Variabilele locale sunt variabile ce pot fi utilizate doar in interiorul unei anumite functii. Variabilele locale se declare in interiorul unei functii.
+         <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+        </template>
+      </category>
+      <category>
+        <pattern>^ valoare ^</pattern>
+        <template>
+           Apel prin valoare = se transmite o copie a parametrului. Astfel, in urma parcurgerii intructiunilor din subprogram valoarea parametrului nu a fost schimbata intrucat se prelucreaza o copie a sa.
+                <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+           </template>
+    </category>
+   <category>
+        <pattern>^ referinta ^</pattern>
+        <template>
+            Apel prin referinţă = se transmite adresa parametrului actual. În cazul apelului prin referinţă, subprogramul,  cunoscând adresa parametrului actual, acţionează direct asupra locaţiei de memorie indicată de aceasta, modificândvaloarea parametrului actual.
+                <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+           </template>
+    </category>
+   </topic>  
+<!--GRAFURI-->	
+<topic name="grafurigeneral">
+   <category>
+       <pattern>^ GRAFURI ORIENTATE ^</pattern>
+       <template>
+           <button>
+               <text>Definitii</text>
+               <postback>definitii orientate</postback>
+           </button>
+           <button>
+               <text>Formule calcul</text>
+               <postback>formule calcul grafuri orientate</postback>
+           </button>
+           <button>
+               <text>Matrice de adiacenta</text>
+               <postback>matrice adiacenta grafuri orientate</postback>
+           </button>
+           <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+       </template>
+   </category>
+   
+    <category>
+       <pattern>^ GRAFURI NEORIENTATE ^</pattern>
+       <template>
+           <button>
+               <text>Definitii</text>
+               <postback>definitii neorientate</postback>
+           </button>
+           <button>
+               <text>Formule calcul</text>
+               <postback>formule calcul grafuri neorientate</postback>
+           </button>
+           <button>
+               <text>Matrice de adiacenta</text>
+               <postback>matrice adiacenta grafuri neorientate</postback>
+           </button>
+           <think>
+               <set name ="topic">grafurineorientate</set>
+           </think>
+       </template>
+   </category>
+</topic>
+<!-- ORIENTATE-->
+<topic name="grafuriorientate">
+    <category>
+        <pattern>^ DEFINITII ORIENTATE ^</pattern>
+        <template>
+             <button>
+                <text>Definitie Graf Orientat</text>
+                <postback>definitie Orientat</postback>
+            </button>
+            <button>
+                <text>Drum</text>
+                <postback>drum</postback>
+            </button>
+            <button>
+                <text>Circuit</text>
+                <postback>circuit</postback>
+            </button>
+            <button>
+                <text>Graf Conex</text>
+                <postback>graf conex</postback>
+            </button>
+            <button>
+                <text>Componenta Conexa</text>
+                <postback>componenta conexa</postback>
+            </button>
+        <think>
+            <set name="topic">definitiiorientate</set>
+        </think>
+        </template>
+    </category>
+  <category>
+      <pattern>^ formule calcul grafuri orientate ^</pattern>
+      <template>
+          <button>
+              <text>Lungimea Lantului</text>
+              <postback>lungimea lantului</postback>
+          </button>
+          <think>
+            <set name="topic">formuleorientate</set>
+        </think>
+      </template>
+  </category>
+  <category>
+      <pattern>^ matrice adiacenta grafuri orientate ^</pattern>
+      <template>
+           Matricea de adiacență a grafului este o matrice cu n linii și n coloane și elemente 0 sau 1, astfel:
+           <ul>
+               <li>are zerouri pe diagonală (dacă în graf nu avem bucle)</li>
+               <li>nu este simetrică față de diagonala principală</li>
+           </ul>
+           <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+      </template>
+  </category>
+</topic>
+<topic name="definitiiorientate">
+    <category>
+        <pattern>Definitie Orientat</pattern>
+        <template>
+          Un graf orientat este o pereche ordonată G = (V, A) unde
+            <ul>
+                <li>V este o mulțime ale cărei elemente se numesc noduri sau vârfuri</li>
+                <li>A este o mulțime de perechi ordonate de noduri, numite săgeți, muchii orientate, arce, sau linii orientate.</li>
+            </ul>
+              <button>
+                <text>Intoarcere la grafuri orientate</text>
+                <postback>definitii orientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+        </template>
+    </category>
+    <category>
+        <pattern>^ DRUM ^</pattern>
+        <template>
+            Se numește drum în graful G o succesiune de noduri, notată
+D = (x1 , x2 ,..., xk), cu proprietatea că pentru orice 1≤i≤k-1, (xi,xi+1) este arc în G.
+            <button>
+                <text>Intoarcere la grafuri orientate</text>
+                <postback>definitii orientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+        </template>
+    </category>
+    <category>
+        <pattern>^ CIRCUIT ^</pattern>
+        <template>
+            e numește circuit un drum simplu în care extremitatea inițială și finală sunt egale. Se numește circuit elementar un circuit în care, cu excepția extremităților, nu se repetă noduri.
+            <button>
+                <text>Intoarcere la grafuri orientate</text>
+                <postback>definitii orientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+        </template>
+    </category>
+    <category>
+        <pattern>^ GRAF CONEX ^</pattern>
+        <template>
+            Graful se numește tare conex dacă între oricare două noduri distincte există cel puțin un drum.
+        <button>
+                <text>Intoarcere la grafuri orientate</text>
+                <postback>definitii orientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+        </template>
+    </category>
+    <category>
+        <pattern>^ COMPONENTA CONEXA ^</pattern>
+        <template>
+            Se numește componentă tare conexă un subgraf tare conex și maximal cu această calitate – dacă am mai adauga un nod, n-ar mai fi tare conex.
+              <button>
+                <text>Intoarcere la grafuri orientate</text>
+                <postback>definitii orientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+        </template>
+    </category>
+</topic>
+<topic name="formuleorientate">
+    <category>
+        <pattern>^ LUNGIMEA LANTULUI ^</pattern>
+        <template>
+            Lungimea unui lanț este egală cu numărul de arce din care este alcătuit.
+            <button>
+                <text>Intoarcere la grafuri</text>
+                <postback>grafuri general</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+                <set name="topic">domeniu</set>
+            </think>
+        </template>
+    </category>
+</topic>
+<!-- End orientate-->
+
+<!--NEORIENTATE-->
+<topic name="grafurineorientate">
+    <category>
+        <pattern>^ DEFINITII NEORIENTATE ^</pattern>
+        <template>
+            <button>
+                <text>Definitie Graf Neorientat</text>
+                <postback>definitie neorientat</postback>
+            </button>
+                <button>
+                <text>Varf Izolat</text>
+                <postback>varf izolat</postback>
+            </button>
+                <button>
+                <text>Varf Terminal</text>
+                <postback>varf terminal</postback>
+            </button>
+                <button>
+                <text>Graf Complet</text>
+                <postback>graf complet</postback>
+            </button>
+            <think>
+                <set name="topic">definitiineorientate</set>
+            </think>
+        </template>
+    </category>
+      <category>
+      <pattern>^ formule calcul grafuri neorientate ^</pattern>
+      <template>
+          <button>
+              <text>Grad Graf Complet</text>
+              <postback>grad graf complet</postback>
+          </button>
+          <think>
+            <set name="topic">formuleneorientate</set>
+        </think>
+      </template>
+  </category>
+  <category>
+      <pattern>^ matrice adiacenta grafuri neorientate ^</pattern>
+      <template>
+           Matricea de adiacență a grafului este o matrice cu n linii și n coloane și elemente 0 sau 1, astfel:
+           <ul>
+               <li>matricea de adiacență este simetrică față de diagonala principală;</li>
+               <li>elementele de pe diagonala principală sunt 0;</li>
+               <li>suma tuturor elementelor din matricea de adiacență a unui graf neorientat este egală cu dublul numărului de muchii din graf.</li>
+           </ul>
+            <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+      </template>
+  </category>
+</topic>
+<topic name="definitiineorientate">
+    <category>
+        <pattern>Definitie neorientat</pattern>
+    <template>
+        Se numeşte graf neorientat o pereche ordonată de mulțimi notată G=(V, M) unde:
+<ul>
+<li>V : este o mulțime finită şi nevidă, ale cărei elemente se numesc noduri sau vârfuri;</li>
+<li>M : este o mulțime, de perechi neordonate de elemente distincte din V, ale cărei elemente se numesc muchii.</li>
+    </ul>
+    <button>
+                <text>Intoarcere la grafuri neorientate</text>
+                <postback>definitii neorientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafurineorientate</set>
+           </think>           
+    </template>
+    </category>
+    <category>
+        <pattern>^ Varf Izolat ^</pattern>
+        <template>
+            Un vârf cu gradul 0 se numește izolat.
+             <button>
+                <text>Intoarcere la grafuri neorientate</text>
+                <postback>definitii neorientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+             <think>
+               <set name ="topic">grafurineorientate</set>
+           </think>  
+        </template>
+    </category>
+        <category>
+        <pattern>^ Varf Terminal ^</pattern>
+        <template>
+          Un vârf cu gradul 1 se numește terminal. 
+             <button>
+                <text>Intoarcere la grafuri neorientate</text>
+                <postback>definitii neorientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+             <think>
+               <set name ="topic">grafurineorientate</set>
+           </think>  
+        </template>
+    </category>
+        <category>
+        <pattern>^ Graf complet  ^</pattern>
+        <template>
+        Se numește graf complet dacă oricare două vârfuri distincte ale sale sunt adiacente. 
+             <button>
+                <text>Intoarcere la grafuri neorientate</text>
+                <postback>definitii neorientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+             <think>
+               <set name ="topic">grafurineorientate</set>
+           </think>  
+        </template>
+    </category>
+</topic>
+<topic name="formuleneorientate">
+    <category>
+        <pattern>^ grad graf complet ^</pattern>
+        <template>
+        Suma tuturor gradelor vârfurilor este egală cu dublu numărului muchiilor.
+            <button>
+                <text>Intoarcere la grafuri</text>
+                <postback>grafuri general</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+                <set name="topic">domeniu</set>
+            </think>
+        </template>
+    </category>
+</topic>
+<!-- End neorientate-->
+
+
+<!-- STRUCTURI-->
+<topic name="structuri">
+    <category>
+    <pattern>Definitie Structuri</pattern>
+    <template>
+        O structura este un tip de date definit de utilizator cuprinzand variabile multiple, de diferite tipuri. Structurile sunt utile pentru descrierea obiectelor. Spre deosebire de tablouri, care stocheaza mai multe valori de acelasi tip, structurile stocheaza valori de diferite tipuri
+      <ul>
+          <li>Apelarea se face cu ajutorul operatorului . (punct), numit și operator de acces direct la membrii unei structuri. Forma generală a acestei operații este: variabila_de_tip_structura.câmp</li>
+      </ul>
+         <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+    </template>
+    
+    </category>
+    <category>
+        <pattern>Notatie</pattern>
+        <template>
+          <card>
+              <image>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/288px-Binary_tree.svg.png</image>
+              <title>Cum arata o structura?</title>
+              <button>
+                  <text>Mai multe informatii despre structuri</text>
+                  <url><map name="link">structuri</map></url>
+              </button>
+          </card>
+           <button>
+                <text>Ai dori sa revii la inceput?</text>
+                <postback>Salut</postback>
+            </button>
+        </template>
+    </category>
+</topic>
+</aiml>
