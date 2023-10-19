@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <!-- NU STIU CE SA RASPUND-->
+	<category>
+	    <pattern>*</pattern>
+	    <template>Te rog sa reformulezi sau sa alegi una dintre variantele oferite!</template>
+	</category>
+	<!-- SALUT-->
+	<category>
+	    <pattern>Salut</pattern>
+	    <template>
+	         <random>
+                <li>Salut! <break/> Despre ce ai vrea sa vorbim?</li>
+                <li>Buna! <break/> Despre ce ai vrea sa vorbim?</li>
+                <li>Salutare! <break/> Despre ce ai vrea sa vorbim?</li> 
+            </random>
+	     <reply>
+	        <text>Subprograme</text>
+	        <postback>subprograme</postback>
+	    </reply>
+	      <reply>
+	        <text>Structuri de Date</text>
+	        <postback>structuri de date</postback>
+	    </reply>
+	      <reply>
+	        <text>Grafuri</text>
+	        <postback>grafuri general</postback>
+	    </reply>
+	    <reply>
+	        <text>Bac</text>
+	        <postback>bac</postback>
+	    </reply>
+	    
+	   <think>
+	        <set name="topic">domeniu</set>
+	    </think>
+	    </template>
+	</category>
+	
+    <category>
+    <pattern>Oprire</pattern>
+    <template>
+        La revedere! Sper ca te-am ajutat si te astept cu alte curiozitati despre informatica!🖐
+    </template>
+</category>
+<!--
+<category>
+    <pattern>Un * este un graf orientat aciclic</pattern>
+    <template>
+         Voi retine ca  un <star/> este un graf orientat aciclic!
+         <learn>
+             <category>
+                 <pattern>Ce este un <eval><star/></eval></pattern>
+                 <template>Un <eval><star/></eval> este un graf orientat aciclic</template>
+             </category>
+         </learn>
+    </template>
+</category>
+-->
+
+<category>
+    <pattern> * este  * </pattern>
+    <template>
+         Voi retine ca <star/> este <star index="2"/>
+         <learn>
+             <category>
+                 <pattern>Ce este  <eval><star intex="1"/></eval></pattern>
+                 <template> <eval><star index="1"/></eval> este <eval><star index="2"/></eval>
+                 </template>
+             </category>
+         </learn>
+    </template>
+</category>
+</aiml>
